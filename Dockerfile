@@ -17,4 +17,4 @@ COPY --from=compiler /opt/venv /opt/venv
 # Enable venv
 ENV PATH="/opt/venv/bin:$PATH"
 COPY . /app/
-CMD ["python", "main.py"]
+CMD ["python", "-u", "main.py"]

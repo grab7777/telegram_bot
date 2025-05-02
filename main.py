@@ -8,7 +8,7 @@ load_dotenv()
 telegram_api_key = os.getenv("TELEGRAM_BOT_API_KEY")
 
 bot = telebot.TeleBot(telegram_api_key)
-
+print("Started telegram bot")
 
 @bot.message_handler(commands=["start", "help"])
 def send_welcome(message):
