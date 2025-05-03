@@ -16,5 +16,7 @@ COPY --from=compiler /opt/venv /opt/venv
 
 # Enable venv
 ENV PATH="/opt/venv/bin:$PATH"
+ENV TELEGRAM_BOT_API_KEY=key
+ENV OPENAI_API_KEY=key
 COPY . /app/
 CMD ["python", "-u", "main.py"]

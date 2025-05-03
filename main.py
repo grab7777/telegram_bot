@@ -4,7 +4,8 @@ import os
 import OpenAI
 
 config = dotenv_values(".env")
-telegram_api_key = config.get("TELEGRAM_BOT_API_KEY")
+print(config)
+telegram_api_key = os.getenv("TELEGRAM_BOT_API_KEY")
 bot = telebot.TeleBot(telegram_api_key)
 print("Started telegram bot")
 
